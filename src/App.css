@@ -1,38 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+html,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    box-sizing: inherit;
+}
+
 .App {
-  text-align: center;
+    font-family: sans-serif;
+    background-color: var(--app-background);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quote__block {
+    background-color: #fff;
+    padding: 30px;
+    width: 70%;
+    max-width: 700px;
+    border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.quote__block .quote__text {
+    color: var(--app-background);
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 1.4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.quote__block .quote__author {
+    color: var(--app-background);
+    font-weight: lighter;
+    font-size: 1.4rem;
+    text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+.quote__block .quote__controls {
+    margin-top: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote__block .quote__controls--button {
+    background-color: var(--app-background);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
 }
